@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bfbfbf"
+    tools:context=".fragment.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageButton
+        android:id="@+id/qrcode"
+        android:layout_width="154dp"
+        android:layout_height="56dp"
+        android:background="@mipmap/qrcode"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="10dp"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@mipmap/img1"
+        app:fabSize="mini"
+        app:backgroundTint="@color/icons"
+        android:layout_gravity="bottom|left"
+        android:layout_marginBottom="90dp"
+        android:layout_marginLeft="10dp"/>
+
+    <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+        android:id="@+id/progressBar"
+        app:mlpb_show_arrow="true"
+        app:mlpb_arrow_height="5dp"
+        app:mlpb_arrow_width="10dp"
+        app:mlpb_enable_circle_background="true"
+        app:mlpb_progress_stoke_width="3dp"
+        app:mlpb_progress_text_visibility="invisible"
+        app:mlpb_progress_color="@color/accent"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom|left"
+        android:layout_marginBottom="150dp"
+        android:layout_marginLeft="10dp"/>
+
+
+</FrameLayout>
