@@ -8,7 +8,8 @@
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#ffffff">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -16,7 +17,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
-                android:background="@color/primary">
+                android:background="@color/accent">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -29,9 +30,9 @@
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/avator"
-                        app:civ_border_width="2dp"
-                        app:civ_border_color="#FF000000" />
+                        android:src="@drawable/avator"/>
+                        <!--app:civ_border_width="2dp"
+                        app:civ_border_color="#FF000000"-->
 
                     <TextView
                         android:id="@+id/name_personal"
@@ -43,9 +44,16 @@
                 </LinearLayout>
             </RelativeLayout>
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="0dp"
+                android:src="#DFDFDF"/>
+
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="#90caf9">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
@@ -81,9 +89,16 @@
                 </LinearLayout>
             </RelativeLayout>
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="0dp"
+                android:src="#DFDFDF"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp">
+                android:layout_height="60dp"
+                android:background="#90caf9">
                 <ImageView
                     android:id="@+id/my_credit_card"
                     android:layout_width="25dp"
@@ -114,9 +129,16 @@
                     android:background="@mipmap/fanhui2"/>
             </LinearLayout>
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="0dp"
+                android:src="#DFDFDF"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp">
+                android:layout_height="60dp"
+                android:background="#90caf9">
                 <ImageView
                     android:id="@+id/my_route"
                     android:layout_width="25dp"
@@ -140,7 +162,20 @@
                     android:layout_marginRight="7dp"
                     android:background="@mipmap/fanhui2"/>
             </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="0dp"
+                android:src="#DFDFDF"/>
         </LinearLayout>
     </ScrollView>
+
+    <!--<ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:src="#DFDFDF" />-->
 
 </RelativeLayout>

@@ -1,31 +1,31 @@
 <resources>
 
-    <style name="Base.AppTheme" parent="Theme.AppCompat">
-        <!--去掉原来的ActionBar-->
+    <!--style name="Base.AppTheme" parent="Theme.AppCompat">
+        &lt;!&ndash;去掉原来的ActionBar&ndash;&gt;
         <item name="windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
-        <!-- API Level 22 编译要去点android -->
+        &lt;!&ndash; API Level 22 编译要去点android &ndash;&gt;
         <item name="windowNoTitle">true</item>
 
-        <!-- Actionbar color -->
+        &lt;!&ndash; Actionbar color &ndash;&gt;
         <item name="colorPrimary">@color/material_deep_teal_500</item>
-        <!--Status bar color-->
+        &lt;!&ndash;Status bar color&ndash;&gt;
         <item name="colorPrimaryDark">@color/material_deep_teal_500</item>
-        <!--Window color-->
+        &lt;!&ndash;Window color&ndash;&gt;
         <item name="android:windowBackground">@color/dim_foreground_material_dark</item>
     </style>
 
-    <!-- Base application theme. -->
+    &lt;!&ndash; Base application theme. &ndash;&gt;
     <style name="AppTheme" parent="Base.AppTheme">
 
-        <!-- 这个属性之所以注释掉是因为它只能在5.0之后使用，所以一定要定义它的话需要在/res/valuse-v21/sytles.xml中进行定义 -->
-        <!-- <item name="android:navigationBarColor">@color/accent_material_light</item> -->
-    </style>
+        &lt;!&ndash; 这个属性之所以注释掉是因为它只能在5.0之后使用，所以一定要定义它的话需要在/res/valuse-v21/sytles.xml中进行定义 &ndash;&gt;
+        &lt;!&ndash; <item name="android:navigationBarColor">@color/accent_material_light</item> &ndash;&gt;
+    </style>-->
 
 
     <!-- Base application theme. -->
-    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primary_dark</item>
         <item name="colorAccent">@color/accent</item>
@@ -33,7 +33,7 @@
         <item name="android:textColorPrimary">@color/primaryd_text</item>
         <item name="android:textColorSecondary">@color/secondary_text</item>
         <item name="android:divider">@color/divider</item>
-    </style>-->
+    </style>
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>

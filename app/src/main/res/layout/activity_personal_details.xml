@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.PersonalCenterActivity">
+    tools:context=".activity.PersonalDetailsActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -19,17 +19,17 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" >
 
             <TextView
-                android:id="@+id/title_personal"
+                android:id="@+id/title_personal_deatails"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="个人中心"
+                android:text="个人信息"
                 android:textSize="25dp"
                 android:layout_gravity="center"/>
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_personal_center" />
+    <include layout="@layout/content_personal_details" />
 
 
 </android.support.design.widget.CoordinatorLayout>

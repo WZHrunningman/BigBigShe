@@ -15,7 +15,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("嗒嗒车");
+        toolbar.setTitle("嗒嗒单车");
         setSupportActionBar(toolbar);
         //setNavigationIcon需放在setSupportActionBar才会生效
         toolbar.setNavigationIcon(R.mipmap.extend);
