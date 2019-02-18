@@ -6,4 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".activity.TestDaoActivity">
 
+    <fragment
+        android:id="@+id/fragment_test_dao"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:name="com.example.wzh.bigbigshe.fragment.TestDaoFragment"/>
 </android.support.constraint.ConstraintLayout>

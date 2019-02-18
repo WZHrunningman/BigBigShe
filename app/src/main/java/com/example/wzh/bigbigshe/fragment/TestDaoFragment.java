@@ -76,8 +76,8 @@ public class TestDaoFragment extends Fragment implements View.OnClickListener {
             @Override
             public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
                 holder.bikeNumber.setText( String.valueOf( rideRecords.get( position ).getBike_id() ) );
-                holder.bikePayMoney.setText( String.valueOf( rideRecords.get( position ) ) );
-                int time = rideRecords.get( position ).getEnd_at().compareTo( rideRecords.get( position ).getStart_at() );
+                holder.bikePayMoney.setText( String.valueOf( rideRecords.get( position ).getMoney() ) );
+                int time = (int) (rideRecords.get( position ).getEnd_at().getTime()- rideRecords.get( position ).getStart_at().getTime());//int强制转型
                 int bikeTime = time / ( 1000 * 60 );
                 holder.bikeTime.setText( String.valueOf( bikeTime ) );
                 holder.timeTv.setText( rideRecords.get( position ).getStart_at().toString() );
@@ -121,7 +121,13 @@ public class TestDaoFragment extends Fragment implements View.OnClickListener {
             record.setEnd_at( new Date(2017, 6, 21));
             record.setMoney( 100 );
             record.setIs_pay( true );
+            datas.add( record );
         }
+
+        daoMaster.newSession().getRideRecordDao().insertOrReplaceInTx( datas );
+        rideRecords.clear();
+        rideRecords.addAll( daoMaster.newSession().getRideRecordDao().loadAll() );
+        adapter.notifyDataSetChanged();
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder{
