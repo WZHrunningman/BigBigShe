@@ -23,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="扫码开锁"
-                android:textStyle="normal"
+                android:textColor="@color/icons"
                 android:textSize="25dp"
                 android:layout_gravity="center"/>
         </android.support.v7.widget.Toolbar>

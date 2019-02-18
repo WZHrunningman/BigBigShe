@@ -24,6 +24,7 @@
                 android:layout_height="wrap_content"
                 android:text="个人中心"
                 android:textSize="25dp"
+                android:textColor="@color/icons"
                 android:layout_gravity="center"/>
         </android.support.v7.widget.Toolbar>
 

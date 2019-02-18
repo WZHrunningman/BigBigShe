@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.PersonalDetailsActivity">
+    tools:context=".activity.SettleActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -19,10 +19,10 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" >
 
             <TextView
-                android:id="@+id/title_personal_deatails"
+                android:id="@+id/settle_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="个人信息"
+                android:text="骑行结束"
                 android:textSize="25dp"
                 android:textColor="@color/icons"
                 android:layout_gravity="center"/>
@@ -30,7 +30,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_personal_details" />
+    <include layout="@layout/content_settle" />
 
 
 </android.support.design.widget.CoordinatorLayout>
