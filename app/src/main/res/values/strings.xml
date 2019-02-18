@@ -7,4 +7,5 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_personal_center">PersonalCenterActivity</string>
     <string name="title_activity_personal_details">PersonalDetailsActivity</string>
+    <string name="title_activity_scan">ScanActivity</string>
 </resources>

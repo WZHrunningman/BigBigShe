@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/button"
+    tools:context=".fragment.ScanFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:id="@+id/reletivelayout_top"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:layout_above="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/bike" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:src="@mipmap/one"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/two"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/reletivelayout_but"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_alignLeft="@id/reletivelayout_top"
+        android:layout_alignRight="@id/reletivelayout_top"
+        android:layout_below="@id/reletivelayout_top"
+        android:layout_marginTop="80dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/three"
+            android:layout_alignParentBottom="true"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/four"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reletivelayout_but"
+        android:layout_centerHorizontal="true"
+        android:text="请对准车上的二维码"
+        android:textColor="@color/icons" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/qwer"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/imageView2"/>
+        <TextView
+            android:id="@+id/shuru"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请输入单车编号"
+            android:textColor="@color/icons"
+            android:layout_below="@+id/imageView2"
+            android:layout_marginLeft="65dp"/>
+
+        <ImageView
+            android:id="@+id/imageView_3"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@mipmap/tyui"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="90dp"
+            android:layout_marginTop="15dp" />
+        <TextView
+            android:id="@+id/shoudiantong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="打开手电筒照明"
+            android:textColor="@color/icons"
+            android:layout_below="@+id/imageView_3"
+            android:layout_marginRight="65dp"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>
