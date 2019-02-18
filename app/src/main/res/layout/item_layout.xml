@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="10dp">
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2019-03-11"
+        android:textSize="20dp"/>
+    <TextView
+        android:id="@+id/bike_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自行车编号"
+        android:textSize="15dp"
+        android:layout_below="@id/time_tv"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:id="@+id/bike_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="骑行时间"
+        android:textSize="15dp"
+        android:layout_below="@id/bike_number"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:id="@+id/bike_PayMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="骑行花费"
+        android:layout_alignBottom="@id/bike_time"
+        android:layout_toRightOf="@id/bike_number"
+        android:layout_marginLeft="100dp"/>
+</RelativeLayout>
