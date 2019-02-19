@@ -1,6 +1,7 @@
 package com.example.wzh.bigbigshe.fragment;
 
 
+import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -14,8 +15,13 @@ import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
 import com.amap.api.maps2d.AMap;
 import com.amap.api.maps2d.MapView;
+import com.amap.api.maps2d.model.LatLng;
+import com.amap.api.maps2d.model.Marker;
+import com.amap.api.maps2d.model.MarkerOptions;
 import com.amap.api.maps2d.model.MyLocationStyle;
 import com.example.wzh.bigbigshe.R;
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,7 +30,7 @@ import butterknife.Unbinder;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements AMap.OnMyLocationChangeListener {
 
 
     @BindView(R.id.map_View)
@@ -33,6 +39,9 @@ public class HomeFragment extends Fragment {
 
     AMap aMap;
     MyLocationStyle myLocationStyle;
+
+    //定义数组
+    ArrayList<Marker> arr = new ArrayList<Marker>();
 
     //声明AMapLocationClient类对象
     public AMapLocationClient mLocationClient = null;
@@ -75,6 +84,7 @@ public class HomeFragment extends Fragment {
         myLocationStyle = new MyLocationStyle();
         aMap.setMyLocationStyle(myLocationStyle);
         aMap.getUiSettings().setMyLocationButtonEnabled(true);
+        aMap.setOnMyLocationChangeListener(this);
         aMap.setMyLocationEnabled(true);
         myLocationStyle.myLocationType(MyLocationStyle.LOCATION_TYPE_LOCATE);
         //定位初始化
@@ -84,6 +94,18 @@ public class HomeFragment extends Fragment {
 
         init();
         return view;
+    }
+
+    private void addDate(LatLng latLng) {
+        for (int m = 0; m < arr.size(); m++) {
+            arr.get(m).destroy();
+        }
+        arr.clear();
+        for (int i = 0; i < 10; i++) {
+            LatLng postion = new LatLng(latLng.latitude+Math.random()/1000,latLng.longitude+Math.random()/1000);
+            Marker marker = aMap.addMarker( new MarkerOptions().position(postion).title("marker"+i) );
+            arr.add(marker);
+        }
     }
 
     private void init() {
@@ -141,5 +163,10 @@ public class HomeFragment extends Fragment {
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState( outState );
         mapView.onSaveInstanceState( outState );
+    }
+
+    @Override
+    public void onMyLocationChange(Location location) {
+        addDate( new LatLng( location.getLatitude(),location.getLongitude() ) );
     }
 }
