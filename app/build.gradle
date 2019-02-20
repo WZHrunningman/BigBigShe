@@ -43,6 +43,9 @@ dependencies {
     implementation 'com.amap.api:map2d:latest.integration'   //2D地图
     implementation 'com.amap.api:search:latest.integration'  //搜索
     implementation 'com.amap.api:location:latest.integration'  //定位
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
     implementation 'com.jakewharton:butterknife:8.8.0'         //黄油刀
     implementation 'com.jakewharton:butterknife-compiler:8.8.0'
 }
